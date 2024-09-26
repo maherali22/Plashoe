@@ -1,0 +1,47 @@
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-box{
+  width: 550px;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 550px;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.send-button {
+  background-color: #3e463e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #020302;
+}

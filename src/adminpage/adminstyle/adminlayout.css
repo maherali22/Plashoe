@@ -1,0 +1,23 @@
+
+.admin-container {
+  display: flex;
+}
+
+
+.admin-content {
+  margin-left: 250px; 
+  padding: 20px;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-content {
+    margin-left: 180px; 
+  }
+}

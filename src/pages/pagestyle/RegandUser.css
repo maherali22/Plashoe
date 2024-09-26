@@ -1,0 +1,165 @@
+/* Form Container */
+.form-container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form Title */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Input Fields */
+input {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Links */
+.form-links {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+.error{
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.logout-btn {
+  background-color: #f44336; /* Red color for logout */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.home-btn{
+  background-color: #5a9efd; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.logout-btn:hover {
+  background-color: #d32f2f; /* Darker red for hover effect */
+}
+.notification3{
+  position: fixed;
+  top: 78px;
+  right: 640px;
+  background:#d32f2f;
+  color: white;
+  font-size: 20px;
+  padding: 10px 40px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index:1000 ;
+}
+.logout_icon{
+  position: fixed;
+  
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  mix-blend-mode: multiply;
+}
+.notification4{
+  position: fixed;
+  top: 280px;
+  right: 640px;
+  background:rgb(73, 180, 43);
+  color: white;
+  font-size: 20px;
+  padding: 10px 40px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index:1000 ;
+}
+
+.login_icon{
+  position: fixed;
+  
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  mix-blend-mode: multiply;
+}
+
+.gender-options {
+  display: flex;
+  gap: 20px;
+}

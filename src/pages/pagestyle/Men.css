@@ -1,0 +1,141 @@
+/* .product-grid {
+  margin-top: 100px;
+  margin: 80px 80px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+.product-card {
+  /* border: 1px solid #ccc; */
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+  
+}
+
+.product-card img {
+  max-width: 0px;
+  height: auto;
+}
+.product-grid {
+  display:grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.product-card {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  width: 240px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.product-card:hover img {
+  transform: scale(1);
+}
+.product-rating {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  
+  text-align: center;
+ 
+  color: black;
+}
+
+.add-to-cart-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838;
+}
+.notification{
+  position:fixed;
+    top: 60px;
+    right: 595px;
+    background:rgb(73, 180, 43);
+    color: white;
+    font-size: 20px;
+    padding: 10px 40px 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index:1000 ;
+}
+
+.tick{
+  position: fixed;
+  top: 68px;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.view-cart-button {
+  background-color: orange;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 15px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.5s;
+}
+
+.view-cart-button:hover {
+  background-color: darkorange;
+  color: white;
+}
+.remove-from-cart-button {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left:8px;
+  transition: background-color 0.5s;
+}
+
+.remove-from-cart-button:hover {
+  background-color: rgb(205, 16, 16);
+}
