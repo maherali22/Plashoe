@@ -7,6 +7,11 @@ import axios from "axios";
 import { CartContext } from "../hooks/CartContext";
 import { AuthContext } from "../hooks/AuthContext";
 import tick from "../components/Assets/tick.gif";
+import { waveform } from "ldrs";
+
+waveform.register();
+
+// Default values shown
 
 const Women = ({ type }) => {
   const [products, setProducts] = useState([]);
@@ -25,6 +30,7 @@ const Women = ({ type }) => {
         const filteredProducts = data.filter(
           (product) => product.type === "women"
         );
+
         setProducts(filteredProducts);
         setLoading(false);
       } catch (error) {
@@ -32,8 +38,9 @@ const Women = ({ type }) => {
         setLoading(false);
       }
     };
-
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 3500);
   }, []);
   const handleAddToCart = (product) => {
     if (user) {
@@ -49,7 +56,12 @@ const Women = ({ type }) => {
       navigate("/login");
     }
   };
-  if (loading) return <p>Loading products...</p>;
+  if (loading)
+    return (
+      <p className="loading">
+        <l-waveform size="45" stroke="3.5" speed="1" color="black"></l-waveform>
+      </p>
+    );
   if (error) return <p>{error}</p>;
 
   return (

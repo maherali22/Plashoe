@@ -13,7 +13,7 @@
 }
 
 .hero-section {
-  background-image:url(https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg?crop=1.00xw:0.849xh;0,0.151xh&resize=2048:*);
+  background-image:url(https://images3.alphacoders.com/133/thumb-1920-1331510.png);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -67,9 +67,9 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .hero-text {
-    font-size: 70px;
+    font-size: 50px;
     text-wrap: 100px;
   }
   .shop-button {

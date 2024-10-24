@@ -28,7 +28,6 @@ const ProductEdit = () => {
       });
   }, [id]);
 
- 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct((prevProduct) => ({
@@ -37,14 +36,13 @@ const ProductEdit = () => {
     }));
   };
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/product/${id}`, product)
+      .patch(`http://localhost:5000/product/${id}`, product)
       .then(() => {
         alert("Product updated successfully!");
-        navigate("/admin/products"); 
+        navigate("/admin/products");
       })
       .catch((error) => {
         console.error("Error updating product!", error);

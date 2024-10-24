@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Chart from "chart.js/auto";
 import "./adminstyle/admindashbord.css";
+import CountUp from "react-countup";
 
 const Dashboard = () => {
   const [usersCount, setUsersCount] = useState(0);
@@ -85,22 +86,30 @@ const Dashboard = () => {
       <div className="grid-cards">
         <div className="card">
           <h3>Total Users</h3>
-          <p>{usersCount}</p>
+          <p>
+            <CountUp start={0} end={usersCount - 1} duration={6} />
+          </p>
         </div>
 
         <div className="card">
           <h3>Total Revenue</h3>
-          <p>₹{totalRevenue}</p>
+          <p>
+            ₹<CountUp start={0} end={totalRevenue} duration={4} />
+          </p>
         </div>
 
         <div className="card">
           <h3>Total Orders</h3>
-          <p>{orderCount}</p>
+          <p>
+            <CountUp start={0} end={orderCount} duration={6} />
+          </p>
         </div>
 
         <div className="card">
           <h3>Total Products</h3>
-          <p>{productsCount}</p>
+          <p>
+            <CountUp start={0} end={productsCount} duration={6} />
+          </p>
         </div>
       </div>
       <div className="chart-section">

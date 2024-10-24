@@ -115,7 +115,7 @@ button:hover {
   margin-left: 10px;
 }
 .logout-btn:hover {
-  background-color: #d32f2f; /* Darker red for hover effect */
+  background-color: #b32f2f; /* Darker red for hover effect */
 }
 .notification3{
   position: fixed;

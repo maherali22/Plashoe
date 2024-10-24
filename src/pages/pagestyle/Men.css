@@ -139,3 +139,9 @@
 .remove-from-cart-button:hover {
   background-color: rgb(205, 16, 16);
 }
+.loading{
+  display: flex;
+  justify-content: center;
+  position: relative;
+top: 280px;  
+}

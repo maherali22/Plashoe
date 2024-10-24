@@ -35,7 +35,7 @@ const Home = () => {
       // Hide the notification after 3 seconds
       setTimeout(() => {
         setShowNotification(false);
-      }, 800);
+      }, 1000);
     } else {
       alert("Please log in to add products to the cart.");
       navigate("/login");

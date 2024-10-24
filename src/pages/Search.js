@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SearchResults = () => {
   const location = useLocation();
@@ -36,18 +36,24 @@ const SearchResults = () => {
         {searchResults.length > 0 ? (
           searchResults.map((product) => (
             <div key={product.id} className="product-card">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
+              <Link to={`/product/${product.id}`}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-image"
+                />
+              </Link>
+
               <h3>{product.name}</h3>
-              <p>{product.description}</p>
+
               <p>
                 <strong>Brand:</strong> {product.brand}
               </p>
               <p>
                 <strong>Price:</strong> ₹{product.price}
+              </p>
+              <p>
+                <strong>Categorie:</strong> {product.rating}
               </p>
               <p>
                 <strong>Rating:</strong> {product.rating}

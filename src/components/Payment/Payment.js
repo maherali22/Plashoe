@@ -54,13 +54,10 @@ const Payment = () => {
           ...updatedUser,
         });
 
-        
         localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
 
-        
         setCart([]);
 
-        
         alert("Payment successful!");
         navigate("/cart");
       }
@@ -160,6 +157,7 @@ const Payment = () => {
             <option value="PayPal">PayPal</option>
           </select>
         </label>
+        <h3 className="cart-total">Total amount: {calculateTotal()}</h3>
         <button
           type="button"
           onClick={handlePayment}

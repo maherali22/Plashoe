@@ -7,6 +7,7 @@ import { AuthContext } from "../hooks/AuthContext";
 import tick from "../components/Assets/tick.gif";
 const Collection = () => {
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { addToCart } = useContext(CartContext);
   const { user } = useContext(AuthContext);
   const [showNotification, setShowNotification] = useState(false);
@@ -21,9 +22,14 @@ const Collection = () => {
         const bestSellers = products.filter((product) => product.rating >= 1);
 
         setBestSellingProducts(bestSellers);
+        setLoading(false);
       })
-      .catch((error) => console.error("Error fetching product data:", error));
+      .catch(
+        (error) => console.error("Error fetching product data:", error),
+        setLoading(false)
+      );
   }, []);
+
   const handleAddToCart = (product) => {
     if (user) {
       addToCart(product);
@@ -32,12 +38,13 @@ const Collection = () => {
 
       setTimeout(() => {
         setShowNotification(false);
-      }, 800);
+      }, 1000);
     } else {
       alert("Please log in to add products to the cart.");
       navigate("/login");
     }
   };
+  if (loading) return <p className="loading">llllllll</p>;
   return (
     <>
       <div className="best-selling-section">

@@ -29,11 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             Lookbook
           </Link>
         </li>
-        <li>
-          <Link to="/sale" onClick={toggleSidebar}>
-            Sale
-          </Link>
-        </li>
+
         <li>
           <Link to="/contact" onClick={toggleSidebar}>
             Contact
