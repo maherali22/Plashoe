@@ -1,26 +1,28 @@
-/* Form Container */
+/* Form Container - Responsive Design */
 .form-container {
-  width: 400px;
-  margin: 100px auto;
-  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  margin: clamp(50px, 10vh, 100px) auto;
+  padding: clamp(20px, 5vw, 40px);
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-sizing: border-box;
 }
 
-/* Form Title */
+/* Form Title - Responsive */
 h2 {
-  font-size: 24px;
+  font-size: clamp(20px, 5vw, 24px);
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Form Layout */
+/* Form Layout - Flexible */
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(15px, 4vw, 20px);
   text-align: left;
 }
 
@@ -35,17 +37,19 @@ label {
   font-weight: 500;
   margin-bottom: 5px;
   color: #555;
+  font-size: clamp(14px, 3vw, 16px);
 }
 
-/* Input Fields */
+/* Input Fields - Responsive and Touch-Friendly */
 input {
-  padding: 12px;
+  padding: clamp(10px, 3vw, 12px);
   width: 100%;
-  font-size: 16px;
+  font-size: clamp(14px, 4vw, 16px);
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -55,10 +59,10 @@ input:focus {
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
 }
 
-/* Submit Button */
+/* Submit Button - Responsive */
 button {
-  padding: 12px;
-  font-size: 16px;
+  padding: clamp(10px, 3vw, 12px);
+  font-size: clamp(14px, 4vw, 16px);
   font-weight: bold;
   background-color: #007bff;
   color: white;
@@ -66,16 +70,18 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Form Links */
+/* Form Links - Responsive */
 .form-links {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
+  text-align: center;
 }
 
 .form-links a {
@@ -87,79 +93,99 @@ button:hover {
   text-decoration: underline;
 }
 
-.error{
-  color:red;
-  font-size: 14px;
+.error {
+  color: red;
+  font-size: clamp(12px, 3vw, 14px);
   margin-top: 5px;
 }
 
-.logout-btn {
-  background-color: #f44336; /* Red color for logout */
+/* Logout and Home Buttons - Responsive */
+.logout-btn, .home-btn {
+  display: inline-block;
+  background-color: #f44336;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: clamp(8px, 3vw, 10px) clamp(15px, 5vw, 20px);
+  font-size: clamp(14px, 4vw, 16px);
   cursor: pointer;
   border-radius: 5px;
   margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
-.home-btn{
-  background-color: #5a9efd; 
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
+
+.home-btn {
+  background-color: #5a9efd;
   margin-left: 10px;
 }
+
 .logout-btn:hover {
-  background-color: #b32f2f; /* Darker red for hover effect */
+  background-color: #b32f2f;
 }
-.notification3{
+
+.home-btn:hover {
+  background-color: #3a7bd5;
+}
+
+/* Notifications - Responsive Positioning */
+.notification3, .notification4 {
   position: fixed;
-  top: 78px;
-  right: 640px;
-  background:#d32f2f;
+  top: clamp(70px, 15vh, 78px);
+  right: 50%;
+  transform: translateX(50%);
+  background: #d32f2f;
   color: white;
-  font-size: 20px;
+  font-size: clamp(16px, 4vw, 20px);
   padding: 10px 40px 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index:1000 ;
-}
-.logout_icon{
-  position: fixed;
-  
-  margin-left: 10px;
-  width: 25px;
-  height: 25px;
-  mix-blend-mode: multiply;
-}
-.notification4{
-  position: fixed;
-  top: 280px;
-  right: 640px;
-  background:rgb(73, 180, 43);
-  color: white;
-  font-size: 20px;
-  padding: 10px 40px 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index:1000 ;
+  z-index: 1000;
+  max-width: 90%;
+  width: auto;
 }
 
-.login_icon{
+.notification4 {
+  background: rgb(73, 180, 43);
+  top: clamp(250px, 40vh, 280px);
+}
+
+.logout_icon, .login_icon {
   position: fixed;
-  
   margin-left: 10px;
-  width: 25px;
-  height: 25px;
+  width: clamp(20px, 5vw, 25px);
+  height: clamp(20px, 5vw, 25px);
   mix-blend-mode: multiply;
 }
 
+/* Gender Options - Flexible Layout */
 .gender-options {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: clamp(10px, 4vw, 20px);
+  justify-content: flex-start;
+}
+
+/* Responsive Adjustments for Small Screens */
+@media screen and (max-width: 480px) {
+  .form-container {
+      margin: 30px auto;
+      padding: 20px;
+  }
+
+  .logout-btn, .home-btn {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  .gender-options {
+      flex-direction: column;
+  }
+
+  .notification3, .notification4 {
+      width: calc(100% - 40px);
+      left: 20px;
+      right: 20px;
+      transform: none;
+      padding: 10px 20px;
+  }
 }

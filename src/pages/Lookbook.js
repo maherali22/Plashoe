@@ -3,14 +3,17 @@ import Footer from "./Footer";
 const Lookbook = () => {
   return (
     <div>
-      
-
       <div
         className="lk-lk"
         style={{
           fontFamily: "sans-serif",
           fontSize: "40px",
           marginBottom: "40px",
+          // marginTop: "50px",
+          // marginLeft: "100px",
+          // fontWeight: "bold",
+          // color: "black",
+          // textDecoration: "none",
         }}
       >
         <h3 style={{ textAlign: "center" }}>Lookbook</h3>

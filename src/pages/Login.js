@@ -14,6 +14,7 @@ const Login = () => {
   const { user, loginUser, logoutUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [showNotification, setShowNotification] = useState(false);
+  
 
   const validateForm = () => {
     let isValid = true;

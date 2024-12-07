@@ -36,6 +36,7 @@ const UsersDetails = () => {
       .patch(`http://localhost:5000/users/${id}`, { blocked: !isBlocked })
       .then((response) => console.log(response.data))
       .catch((error) => console.error("Error updating user status:", error));
+      
   };
 
   if (!user) {

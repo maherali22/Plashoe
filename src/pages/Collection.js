@@ -23,6 +23,7 @@ const Collection = () => {
 
         setBestSellingProducts(bestSellers);
         setLoading(false);
+        
       })
       .catch(
         (error) => console.error("Error fetching product data:", error),
